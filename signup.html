@@ -29,6 +29,19 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       overflow: hidden;
       opacity: 0.95;
+      animation: fadeIn 1.5s ease forwards; /* play animation on load */
+    }
+
+        /* Add fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px); /* slight upward slide for effect */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .left {
@@ -235,7 +248,7 @@
     </div>
     <!-- Signup CTA -->
     <div class="signup-cta">
-      Already in TeamSync? <a href="signup.html">Sign in</a>
+      Already in TeamSync? <a href="index.html">Sign in</a>
     </div>
   </div>
 

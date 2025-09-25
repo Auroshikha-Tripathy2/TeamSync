@@ -19,6 +19,18 @@
       background: linear-gradient(180deg, #4397c7, #00416d);
     }
 
+        /* Add fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px); /* slight upward slide for effect */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -28,8 +40,10 @@
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       overflow: hidden;
-      opacity: 0.95;
+      opacity: 0;                /* start hidden */
+      animation: fadeIn 1.5s ease forwards; /* play animation on load */
     }
+
 
     .left {
       flex: 1;

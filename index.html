@@ -4,213 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Team Sync</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(180deg, #4397c7, #00416d);
-    }
-
-        /* Add fade-in animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px); /* slight upward slide for effect */
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 900px;
-      max-width: 95%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      overflow: hidden;
-      opacity: 0;                /* start hidden */
-      animation: fadeIn 1.5s ease forwards; /* play animation on load */
-    }
-
-
-    .left {
-      flex: 1;
-      min-width: 300px;
-      background: linear-gradient(135deg, #0e537a, #1676b8);
-      color: white;
-      padding: 40px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .left h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .left p {
-      font-size: 15px;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-
-    .right {
-      flex: 1;
-      min-width: 300px;
-      padding: 40px 30px;
-    }
-
-    .right h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-      color: #0e537a;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    input:focus {
-      border-color: #1676b8;
-      outline: none;
-      box-shadow: 0 0 5px rgba(22,118,184,0.4);
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    button {
-      flex: 1;
-      padding: 12px;
-      border-radius: 6px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn-primary {
-      background: #1676b8;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #0e537a;
-    }
-
-    .btn-secondary {
-      background: #eee;
-      color: #333;
-    }
-
-    .btn-secondary:hover {
-      background: #ccc;
-    }
-
-    .remember {
-      display: flex;              /* flexbox for horizontal alignment */
-      justify-content: space-between; /* push items to left and right edges */
-      align-items: center;        /* vertically center the radio + text */
-      width: 100%;                /* take full width so spacing works */
-      margin-bottom: 10px;
-      gap: 10px;
-    }
-
-    .remember label {
-      display: flex;              /* radio + text inline */
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      white-space: nowrap;       /* keep "Remember Me" on one line */
-      cursor: pointer;
-    }
-
-    /* ensure the checkbox inside .remember stays inline and isn't stretched
-       by the global `input` rule which sets width:100% */
-    .remember input[type="checkbox"] {
-      width: auto;
-      margin: 0; /* remove extra bottom margin from global input rule */
-      vertical-align: middle;
-      transform: translateY(0.5px); /* tiny visual vertical centering */
-    }
-
-    .remember a {
-      font-size: 14px;
-      color: #6a2ea6; /* subtle accent color for the link */
-      align-self: flex-start;
-      text-decoration: none;
-    }
-
-    /* Small screens: stack the items for better readability */
-    @media (max-width: 480px) {
-      .remember {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      
-      .remember label {
-        white-space: normal; /* allow wrapping on very small screens */
-      }
-    }
-    
-    /* Signup CTA that appears at the end of the container */
-    .signup-cta {
-      width: 100%;
-      padding: 14px 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #333;
-      border-top: 1px solid rgba(0,0,0,0.04);
-      background: rgba(24, 127, 167, 0.336);
-    }
-
-    .signup-cta a {
-      color: #1676b8;
-      font-weight: 600;
-      text-decoration: none;
-      margin-left: 6px;
-    }
-
-    .signup-cta a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="container">
@@ -231,8 +25,8 @@
         <input type="password" id="password" name="password" placeholder="Enter your password" aria-label="Password" required>
 
         <div class="remember">
-          <label for="remember"><input type="checkbox" id="remember" name="remember">Remember Me</label>
-          <a href="" target="_blank">Forgot password?</a>
+          <label for="remember"><input type="radio" id="remember" name="remember">Remember Me</label>
+          <a href="#" target="_blank">Forgot password?</a>
         </div>
 
         <div class="buttons">
@@ -241,6 +35,7 @@
         </div>
       </form>
     </div>
+
     <!-- Signup CTA -->
     <div class="signup-cta">
       New to TeamSync? <a href="signup.html">Create account</a>
@@ -248,7 +43,7 @@
   </div>
 
   <script>
-    // Basic login simulation (replace with backend auth later)
+    // Simple redirect version — no authentication required
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
@@ -256,12 +51,12 @@
       const password = document.getElementById("password").value.trim();
 
       if (username && password) {
-        // Save user in localStorage (demo only)
+        // Save the username for personalized greeting
         localStorage.setItem("loggedInUser", username);
-        // Redirect to chat page
-        window.location.href = "chat.html";
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
       } else {
-        alert("Please fill in both fields.");
+        alert("Please fill in both fields before logging in.");
       }
     });
   </script>

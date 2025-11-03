@@ -1,0 +1,149 @@
+<!-- TeamSync Dashboard - Enhanced Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TeamSync Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <div class="logo">TeamSync</div>
+    <div class="profile">
+      <div>Welcome, Archiee!</div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Sidebar + Projects -->
+    <div class="sidebar-container">
+      <aside class="sidebar">
+        <nav>
+          <a href="#">Dashboard</a>
+          <a href="#">Projects</a>
+          <a href="#">Team</a>
+          <a href="#">Messages</a>
+          <a href="#">Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Projects Section -->
+      <div class="projects-section">
+        <h3>MY PROJECTS</h3>
+
+        <div class="project-card">
+          <div class="project-name">Internet & Web Tech</div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar" style="width:70%;"></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">Machine Learning</div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar" style="width:40%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h2>Dashboard Overview</h2>
+      <div style="margin-bottom:8px; color: #666;">Track your projects and team activity</div>
+
+      <!-- Stat Cards -->
+      <div class="cards">
+        <div class="card1">
+          <div class="value">12</div>
+          <div class="title">Total Projects</div>
+        </div>
+        <div class="card1">
+          <div class="value">34</div>
+          <div class="title">Active Tasks</div>
+        </div>
+        <div class="card1">
+          <div class="value">8</div>
+          <div class="title">Team Members</div>
+        </div>
+        <div class="card1">
+          <div class="value">56</div>
+          <div class="title">Completed Tasks</div>
+        </div>
+      </div>
+
+      <!-- Recent Activity & Upcoming Tasks -->
+      <div class="activity-container">
+        <div class="activity-card">
+          <h3>Recent Activity</h3>
+          <ul>
+            <li>Completed UI Design for Website</li>
+            <li>Updated Project Plan for ML</li>
+            <li>Team discussion scheduled</li>
+          </ul>
+        </div>
+
+        <div class="activity-card">
+          <h3>Upcoming Tasks</h3>
+          <ul class="task-list">
+            <li>
+              <div class="task-title">Deploy final build for WebTech</div>
+              <div class="task-date">Due: Nov 8, 2025</div>
+              <div class="progress-bar-bg small">
+                <div class="progress-bar" style="width:85%;"></div>
+              </div>
+            </li>
+            <li>
+              <div class="task-title">Prepare ML Model Evaluation</div>
+              <div class="task-date">Due: Nov 12, 2025</div>
+              <div class="progress-bar-bg small">
+                <div class="progress-bar" style="width:55%;"></div>
+              </div>
+            </li>
+            <li>
+              <div class="task-title">Client Presentation Meeting</div>
+              <div class="task-date">Due: Nov 15, 2025</div>
+              <div class="progress-bar-bg small">
+                <div class="progress-bar" style="width:20%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project Status Overview -->
+      <div class="status-overview">
+        <h3>Project Status Overview</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Status</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Internet & Web Tech</td>
+              <td>In Progress</td>
+              <td><div class="progress-bar-bg"><div class="progress-bar" style="width:70%;"></div></div></td>
+            </tr>
+            <tr>
+              <td>Machine Learning</td>
+              <td>Ongoing</td>
+              <td><div class="progress-bar-bg"><div class="progress-bar" style="width:45%;"></div></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

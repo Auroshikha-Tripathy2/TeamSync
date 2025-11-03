@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, #00416d, #4397c7);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Important to separate scrolling areas */
+}
+
+/* Sidebar Scroll */
+.sidebar-container {
+  color: white;
+  width: 260px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Sidebar scroll */
+  background: #00375c;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 4px;
+}
+
+/* Sidebar Links */
+.sidebar nav a {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 9px;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+}
+.sidebar nav a:hover {
+  background: white;
+  color: black;
+}
+
+/* Projects Section */
+.projects-section h3 {
+  margin-bottom: 8px;
+  color: #00d4ff;
+}
+.project-card {
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Content Scroll */
+.main-content {
+  background: white;
+  border-radius: 14px 0 0 14px;
+  padding: 20px 30px;
+  flex: 1;
+  overflow-y: auto; /* Independent scroll for main area */
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+.card1 {
+  background: #1676b8;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Activity & Tasks */
+.activity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.activity-card {
+  background: #1676b8;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.25);
+}
+.activity-card:hover {
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+}
+.activity-card h3 {
+  margin-top: 0;
+  color: #dde9f1;
+}
+.activity-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.activity-card li {
+  margin: 12px 0;
+  color: #fff;
+}
+
+/* Task Styling */
+.task-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.task-date {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+}
+
+/* Progress Bars */
+.progress-bar-bg {
+  width: 100%;
+  background: #e6e6e6;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: #00bfff;
+  height: 8px;
+  border-radius: 10px;
+}
+.progress-bar-bg.small {
+  height: 6px;
+}
+
+/* Status Overview */
+.status-overview {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.25);
+}
+.status-overview table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.status-overview th, .status-overview td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .activity-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,3 +1,4 @@
+/*07-11-25*/
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, sans-serif;
@@ -85,7 +86,6 @@ body {
 /* Main Content Scroll */
 .main-content {
   background: white;
-  border-radius: 14px 0 0 14px;
   padding: 20px 30px;
   flex: 1;
   overflow-y: auto; /* Independent scroll for main area */
@@ -192,3 +192,13 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.project-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+  background: rgba(255,255,255,0.15);
+}
+

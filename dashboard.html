@@ -1,4 +1,5 @@
-<!-- TeamSync Dashboard - Enhanced Layout -->
+<!-- 07-11-25 -->
+<!-- TeamSync Dashboard - Enhanced Layout with Kanban Linking -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
   <!-- Top Navbar -->
   <div class="navbar">
     <div class="logo">TeamSync</div>
+    <header>Dashboard</header>
     <div class="profile">
       <div>Welcome, Archiee!</div>
     </div>
@@ -28,7 +30,7 @@
           <a href="#">Projects</a>
           <a href="#">Team</a>
           <a href="#">Messages</a>
-          <a href="#">Settings</a>
+          <a href="setting.html">Settings</a>
         </nav>
       </aside>
 
@@ -36,14 +38,15 @@
       <div class="projects-section">
         <h3>MY PROJECTS</h3>
 
-        <div class="project-card">
+        <!-- Added Kanban linking -->
+        <div class="project-card" onclick="openKanban('Internet & Web Tech')">
           <div class="project-name">Internet & Web Tech</div>
           <div class="progress-bar-bg">
             <div class="progress-bar" style="width:70%;"></div>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="openKanban('Machine Learning')">
           <div class="project-name">Machine Learning</div>
           <div class="progress-bar-bg">
             <div class="progress-bar" style="width:40%;"></div>
@@ -144,6 +147,14 @@
 
     </main>
   </div>
+
+  <!-- Script: Kanban Opening -->
+  <script>
+    // Function to redirect user to Kanban board page with project name as a query parameter
+    function openKanban(projectName) {
+      window.location.href = `kanban.html?project=${encodeURIComponent(projectName)}`;
+    }
+  </script>
 
 </body>
 </html>

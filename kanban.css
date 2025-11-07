@@ -1,0 +1,332 @@
+/* === Base Setup === */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, #00416d, #4397c7);
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Navbar === */
+.navbar {
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.back-btn {
+  background-color: #ffffff;
+  color: #1676b8;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #e6f0ff;
+}
+
+/* === Layout === */
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  color: white;
+  width: 260px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: #00375c;
+}
+
+/* === Projects === */
+.projects-section h3 {
+  margin-bottom: 8px;
+  color: #00d4ff;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* === Main Content === */
+.main-content {
+  background: white;
+  padding: 20px 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* === Kanban Board === */
+.board-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;
+  height: calc(100vh - 180px);
+  position: relative;
+}
+
+.list {
+  background: var(--list-color, #1676b8);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  min-width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: visible; /* Allows dropdown overflow */
+  transition: transform 0.2s ease;
+}
+
+.list:hover {
+  transform: translateY(-3px);
+}
+
+/* === List Title === */
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 6px;
+}
+
+.list-title button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.list-title button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* === Dropdown === */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  right: 10px;
+  background: #ffffff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+  min-width: 170px;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Dropdown Buttons */
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu button:hover {
+  background: #eaf4fb;
+}
+
+/* === Color Swatches === */
+.color-swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  border: 2px solid #00000033;
+}
+
+/* === Tickets === */
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ticket {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: grab;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ticket:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* === Add Ticket === */
+.list-footer {
+  margin-top: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.quick-add-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.add-ticket-btn {
+  background: #135f98;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.add-ticket-btn:hover {
+  background: #114d7d;
+}
+
+/* === Floating Add List Button === */
+.add-list-btn-fixed {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  background: #1676b8;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 200;
+}
+
+.add-list-btn-fixed:hover {
+  background: #135f98;
+}
+
+/* === Dialog === */
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+}
+
+.dialog.hidden {
+  display: none;
+}
+
+.dialog-content {
+  background: #1676b8;
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.dialog-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.dialog-buttons button {
+  background: white;
+  color: #1676b8;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dialog-buttons button:hover {
+  background: #e4e4e4;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

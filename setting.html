@@ -1,0 +1,232 @@
+<!-- TeamSync Dashboard - Enhanced Layout with Kanban Linking -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TeamSync Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <div class="logo">TeamSync</div>
+    <header>Settings</header>
+    <div class="profile">
+      <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+    </div>
+
+    <script>
+      // Simple function to go back or redirect to dashboard
+      function goBack() {
+        // If you have a specific dashboard page:
+        window.location.href = "dashboard.html"; // change to your actual dashboard file name
+        // Or if you just want to go back in browser history:
+        // window.history.back();
+      }
+    </script>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Sidebar + Projects -->
+    <div class="sidebar-container">
+      <aside class="sidebar">
+        <nav>
+          <a href="#account">Account</a>
+          <a href="#profile">Profile & Presence</a>
+          <a href="#appearance">Appearance & Theme</a>
+          <a href="#notifications">Notifications</a>
+          <a href="#chat">Chat & Messaging</a>
+          <a href="#kanban">Kanban / Projects</a>
+          <a href="#privacy">Privacy & Security</a>
+          <a href="#help">Help & Support</a>
+          <a href="#logout">Log Out!!</a>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1>Settings Overview</h1>
+
+      <!-- Account Section -->
+      <section id="account" class="account">
+        <h2>Account</h2>
+        <p>Manage your account details, change avatars and configure login settings.</p>
+        
+        <h4>Personal Details</h4>
+        <form>
+          <table>
+            <tr>
+              <td><label for="username">UserName:</label></td>
+              <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr>
+              <td><label for="fname">First Name:</label></td>
+              <td><input type="text" id="fname" name="fname" required></td>
+            </tr>
+            <tr>
+              <td><label for="lname">Last Name:</label></td>
+              <td><input type="text" id="lname" name="lname" required></td>
+            </tr>
+            <tr>
+              <td><label>Gender:</label></td>
+              <td>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="dob">Date of Birth:</label></td>
+              <td><input type="text" id="dob" name="dob" required></td>
+            </tr>
+          </table>
+        </form>
+
+        <h4>Avatars</h4>
+        <div class="avatar">
+          <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+              <td><center><img src="img15.png" alt="Image 1" width="70" height="50"></center></td>
+              <td><center><img src="img13.png" alt="Image 2" width="70" height="50"></center></td>
+              <td><center><img src="img14.png" alt="Image 3" width="70" height="50"></center></td>
+              <td><center><img src="img10.png" alt="Image 10" width="70" height="50"></center></td>
+            </tr>
+            <tr>
+              <td><center><img src="img16.png" alt="Image 4" width="70" height="50"></center></td>
+              <td><center><img src="img5.png" alt="Image 5" width="70" height="50"></center></td>
+              <td><center><img src="img6.png" alt="Image 6" width="70" height="50"></center></td>
+              <td><center><img src="img12.png" alt="Image 12" width="70" height="50"></center></td>
+            </tr>
+            <tr>
+              <td><center><img src="img7.png" alt="Image 7" width="70" height="50"></center></td>
+              <td><center><img src="img.png" alt="Image 8" width="70" height="50"></center></td>
+              <td><center><img src="img9.png" alt="Image 9" width="70" height="50"></center></td>
+              <td><center><img src="img11.png" alt="Image 11" width="70" height="50"></center></td>
+            </tr>
+          </table>
+        </div>
+
+        <h4>Contact Details</h4>
+        <form>
+          <table>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="contact">Contact No.:</label></td>
+              <td><input type="tel" id="contact" name="contact" placeholder="10-digit number" pattern="[0-9]{10}" required></td>
+            </tr>
+          </table>
+        </form>            
+        
+        <div class="buttons">
+          <button type="submit">Delete Account</button>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="profile">
+        <h2>Profile & Presence</h2>
+        <p>Customize your profile visibility, status messages, and presence settings.</p>
+        <h4>Online / Away / DND toggle</h4>
+        <h4>Custom status message</h4>
+        <h4>Auto-away after X minutes</h4>
+      </section>
+
+      <!-- Appearance Section -->
+      <section id="appearance" class="appearance">
+        <h2>Appearance & Theme</h2>
+        <p>Choose your preferred theme, layout, and color schemes for the application.</p>
+        <h4>Light / Dark mode toggle</h4>
+        <h4>Custom color schemes</h4>
+      </section>
+
+      <!-- Notifications Section -->
+      <section id="notifications" class="notifications">
+        <h2>Notifications</h2>
+        <p>Set your notification preferences for messages, mentions, and other activities.</p>
+
+        <div class="setting">
+          <h4>Enable / Disable sound notifications</h4>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting">
+          <h4>Desktop notifications settings</h4>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting">
+          <h4>Notification schedule</h4>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Chat Section -->
+      <section id="chat" class="chat">
+        <h2>Chat & Messaging</h2>
+        <p>Configure your chat settings, message history, and formatting options.</p>
+        <h4>Message history retention</h4>
+        <h4>Text formatting options</h4>
+        <h4>Auto-download media</h4>
+      </section>
+
+      <!-- Kanban Section -->
+      <section id="kanban" class="kanban">
+        <h2>Kanban / Projects</h2>
+        <p>Manage your Kanban board settings, project templates, and task automation.</p>
+        <h4>Default project templates</h4>
+        <h4>Task automation rules</h4>
+        <h4>Board layout options</h4>
+      </section>
+
+      <!-- Privacy Section -->
+      <section id="privacy" class="privacy">
+        <h2>Privacy & Security</h2>
+        <p>Adjust your privacy settings, two-factor authentication, and data sharing preferences.</p>
+        <h4>Two-factor authentication setup</h4>
+        <h4>Data sharing preferences</h4>
+        <h4>Session management</h4>
+      </section>
+
+      <!-- Help Section -->
+      <section id="help" class="help">
+        <h2>Help & Support</h2>
+        <p>Access help resources, contact support, and provide feedback.</p>
+        <h4>Help center links</h4>
+        <h4>Contact support form</h4>
+        <h4>Feedback submission</h4>
+      </section>
+
+      <!-- Logout Section -->
+      <section id="logout" class="logout">
+        <h2>Log Out</h2>
+        <p>You can safely log out from your TeamSync account.</p>
+        <button>Log Out</button>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
